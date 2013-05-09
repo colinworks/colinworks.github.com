@@ -25,14 +25,9 @@
                     <li><a href="/reading.html">阅读</a></li>
                     <li><a href="/about.html">关于</a></li>
                 </ul>
-                <!--
-                <form class="navbar-form pull-right" action="#">
-                    <input name="s" type="text" class="span2" placeholder="Search">
-                </form>
-                -->
             </div>
         </div>
-        
+
         <div>
             {{ content }}
         </div>
@@ -41,16 +36,16 @@
             <hr>
             <p class="text-center">
                 使用 <a target="_blank" href="http://jekyllrb.com/">Jekyll</a>、<a target="_blank" href="http://twitter.github.io/bootstrap">Bootstrap</a> 和 <a target="_blank" href="http://pages.github.com/">GitHub Pages</a> 搭建<br/>
-                &copy; 2013 . {{ site.name }}
+                &copy; 2013 {{ site.name }}
             </p>
         </div>
 
     </div>
 
     <script type="text/javascript">
-        $(function() {
-            $("ul.nav li:eq(" + index + ")").attr("class", "active");
-        });
+    $(function() {
+        $("ul.nav li:eq(" + index + ")").attr("class", "active");
+    });
     </script>
 </body>
 </html>
