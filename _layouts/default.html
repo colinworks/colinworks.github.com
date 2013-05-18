@@ -7,9 +7,6 @@
     <link href="{{ site.url }}/css/main.css" rel="stylesheet" media="screen">
     <script src="{{ site.url }}/jquery/jquery.js"></script>
     <script src="{{ site.url }}/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var page_id = "home"; // default page
-    </script>
 </head>
 
 <body>
@@ -45,9 +42,9 @@
     </div>
 
     <script type="text/javascript">
-    $(function() {
-        $("ul.nav li#nav_"+page_id).attr("class", "active");
-    });
+        $(function() {
+            $("ul.nav li#nav_{{ page.id }}").attr("class", "active");
+        });
     </script>
 </body>
 </html>
