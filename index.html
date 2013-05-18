@@ -1,0 +1,15 @@
+---
+layout: default
+title: "首页"
+---
+
+{% for post in site.posts limit:5 %}
+    <h4><a class="post_title" href="{{ post.url }}">{{post.title}}</a></h4>
+    <div class="rich-content">
+        {{ post.content }}
+    </div>
+{% endfor %}
+
+<script type="text/javascript">
+    var page_id = "home";
+</script>

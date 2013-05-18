@@ -1,0 +1,28 @@
+---
+layout: default
+title: "归档"
+---
+
+<div id="content">
+    {% capture archives_year %}
+        {{ 'now' | date: '%Y' }}
+    {% endcapture %}
+    <ul>
+    {% for post in site.posts %}
+        {% capture post_year %}
+            {{ post.date | date: '%Y' }}
+        {% endcapture %}
+        {% if archives_year != post_year %}
+            {% assign archives_year = post_year %}
+            </ul>
+            <h4>{{ archives_year }}</h4>
+            <ul>
+        {% endif %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var page_id = "archives";
+</script>

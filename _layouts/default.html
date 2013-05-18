@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }} | {{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ site.url }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ site.url }}/css/main.css" rel="stylesheet" media="screen">
+    <script src="{{ site.url }}/jquery/jquery.js"></script>
+    <script src="{{ site.url }}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var page_id = "home"; // default page
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 菜单栏目 -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand" href="/">{{ site.name }}</a>
+                <ul class="nav">
+                    <li id="nav_home"><a href="/">博客</a></li>
+                    <li id="nav_categories"><a href="/categories.html">目录</a></li>
+                    <li id="nav_archives"><a href="/archives.html">归档</a></li>
+                    <li id="nav_reading"><a href="/reading.html">阅读</a></li>
+                    <li id="nav_about"><a href="/about.html">关于</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="padding: 15px 20px">
+            {{ content }}
+        </div>
+
+        <div class="footer">
+            <hr>
+            <p class="text-center">
+                使用 <a target="_blank" href="http://jekyllrb.com/">Jekyll</a>、<a target="_blank" href="http://twitter.github.io/bootstrap">Bootstrap</a> 和 <a target="_blank" href="http://pages.github.com/">GitHub Pages</a> 搭建<br/>
+                &copy; {{site.copyright.year}} {{ site.copyright.by }}
+            </p>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+    $(function() {
+        $("ul.nav li#nav_"+page_id).attr("class", "active");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+author:
+    name: 张露兵
+    e_name: Colin Zhang
+    qq: 757275675 (少有人走的路)
+    email: zhanglubing927[at]gmail.com
+    weibo: http://weibo.com/zhanglubing
+
+copyright:
+    by: 少有人走的路
+    year: 2013
+
+name: 少有人走的路
+pygments:   true
+
+permalink:   /:year-:month-:day/:title.html
